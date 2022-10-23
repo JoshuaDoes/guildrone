@@ -1,4 +1,4 @@
-module github.com/FlameInTheDark/guildrone
+module github.com/JoshuaDoes/guildrone
 
 go 1.18
 
