@@ -52,7 +52,7 @@ func (s *Session) Open() error {
 		if len(s.LastEventID) > 0 {
 			header.Add("guilded-last-message-id", s.LastEventID)
 		}
-		s.eventMu.Unlock()
+		s.eventMu.RUnlock()
 	}
 	s.wsConn, _, err = websocket.DefaultDialer.Dial(EndpointGuildedWebsocket, header)
 	if err != nil {
